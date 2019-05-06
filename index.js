@@ -4,7 +4,8 @@ import flatten from 'lodash/flatten';
 import * as funcs from './functions';
 
 async function main() {
-  const instance = await faast('local', funcs);
+  // const instance = await faast('local', funcs);
+  const instance = await faast('aws', funcs);
   try {
     const { crawlTileFromPage, crawlDetail } = instance.functions;
 
